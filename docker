@@ -1,0 +1,4 @@
+docker ps  # get the name of existing container
+docker exec -it <container name> /bin/bash  # get the bash shell of a container
+docker exec -it <container name> <command>  # execute whatever command specify in the container
+
