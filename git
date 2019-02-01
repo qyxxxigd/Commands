@@ -39,6 +39,7 @@ git log  # show commit history
 # 1. generating a new SSH key
 ssh-keygen -t rsa -b 4096 -C "${user}@${example}.com"
 # 2. Adding the new SSH key to your GitHub account
+pbcopy < ~/.ssh/id_rsa.pub  # for mac
 # 3. Adding the new SSH key to the ssh-agent
 # 3.1. Append the following to  ~/.bashrc
 eval $(ssh-agent -s)
