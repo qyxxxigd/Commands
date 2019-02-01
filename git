@@ -1,0 +1,36 @@
+# -------- CREATE --------
+git init  # initializes git inside the pwd
+git init --bare  # Creating a remote in current dir
+git clone <url>  # Cloning from remote
+git remote add origin <url>  # adding remote named "origin" to the local repository
+
+# -------- COMMITS --------
+git add <files>  # add files for committing
+git commit -m "meaningful commit message" # commit changes
+git push origin <branch>  # pushing to a remote named "origin"
+git pull origin <branch>  # pulling from a remote names "origin"
+
+# -------- BRANCHES --------
+git branch branch-new  # creating a branch named branch-new
+git checkout branch-new  # switching to a branch named branch-new
+
+# -------- MERGE --------
+# merging branch-new into branch-master
+git checkout branch-master
+git merge branch-new
+
+# -------- TAGS --------
+git tag <tag-name>  # create a tag
+git tag -l  # list tags
+git tag -d <tag-name>  # delete a tag
+
+# -------- UNDO --------
+git reset --hard HEAD  # discard all local changes in your working directory
+git checkout HEAD <filename>  # discard local changes in a specific file
+git revert <commit>  # revert a commit by creating a new UNDO commit
+git reset --hard <commit>  # reset repository to a previous commit and discard all the changes since then
+git reset <commit>  # reset repository to a previous commit and preserve changes since then as unstaged
+
+# -------- STATUS AND HISTORY --------
+git status  # show changed files since last commit
+git log  # show commit history
